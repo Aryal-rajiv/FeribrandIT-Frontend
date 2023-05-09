@@ -1,0 +1,97 @@
+/* NAv BAr */
+.navbar-nav a{
+  font-size: 18px;
+}
+.navbar-brand{
+  padding-right: 25rem;
+}
+
+
+.carsousel-item img{
+  height: 550px;
+}
+
+.cartProductContainer{
+  border: 1px solid #000;
+  margin: 5px;
+}
+.cartProductContainer img{
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+  background-size: contain;
+}
+
+.total{
+  font-size: 3rem;
+}
+.statusContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+  position: sticky;
+  top: 0;
+  height: 300px;
+}
+
+
+.wrapper{
+  padding: 4rem 0;
+ 
+    }
+  
+
+.hero-section-data {
+  float: left;
+  width: 50%;
+}
+.into-data {
+  margin-left: 3rem;
+}
+.hero-section-image {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex: right;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+
+figure {
+  position: relative;
+  &::after {
+    content: "";
+    width: 60%;
+    height: 80%;
+    background-color: brown;
+    position: absolute;
+    left: 50%;
+    top: -5rem;
+    z-index: -1;
+  }
+}
+.img-style {
+  width: 100%;
+  height: auto;
+}
+.quote{
+  padding-left: 3rem;
+  font-style: italic;
+  text-align: center;
+}
+
+  
+  .contact-form {
+    max-width: 50rem;
+    margin: auto;
+  }
+    
+    .contact-inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+        }
