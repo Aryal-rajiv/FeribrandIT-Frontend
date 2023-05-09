@@ -1,4 +1,5 @@
 import myKey from './Khaltikey.js';
+import axios from 'axios';
 
 
 const config = {
@@ -9,7 +10,22 @@ const config = {
     "productUrl": "http://localhost:3000",
     "eventHandler": {
         onSuccess (payload) {
-            // hit merchant api for initiating verfication
+            const axios = require(axios);
+
+            let data = {
+              "token": payload.token,
+              "amount": payload.amount
+            };
+            
+            axios
+            .get('https://meslaforum.herokuapp.com/khal...{data.token}/${data.amount}/${myKey.secretKey')
+            .then(response => {
+              console.log(response.data);
+              alert("The transaction is sucessful");
+            })
+            .catch(error => {
+              console.log(error);
+            });
             console.log(payload);
         },
         // onError handler is optional
