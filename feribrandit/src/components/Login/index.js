@@ -41,7 +41,7 @@ export default function index() {
             </label>
           </div>
           <button type="submit" className="btn btn-primary">
-            Submit
+            Login
           </button>
         </form>
       </div>

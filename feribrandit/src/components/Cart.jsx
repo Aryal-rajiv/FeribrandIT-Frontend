@@ -36,6 +36,8 @@ export default function Cart() {
             total += x.sub_total;
           })}
           <div className="total"> Rs. {parseFloat(total).toFixed(2)}</div>
+          <br />
+          
         </div>
       </div>
     </div>

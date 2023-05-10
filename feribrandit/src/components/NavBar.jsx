@@ -43,7 +43,7 @@ export default function NavBar() {
                 <i className="fa fa-sign-in me-1"></i> Login
               </NavLink>
               <NavLink to="/register" className="btn btn-outline-dark ms-2">
-                <i className="fa fa-user-plus me-1"></i> Register
+                <i className="fa fa-user-plus me-1"></i> Sign up
               </NavLink>
               <NavLink to="/cart" className="btn btn-outline-dark ms-2">
                 <i className="fa fa-shopping-cart me-1"></i> Cart (

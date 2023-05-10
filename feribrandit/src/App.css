@@ -180,3 +180,36 @@ figure {
   font-size: 14px;
   color: #888;
 }
+
+/*Css for sign up form */
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  justify-content: center;
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  display: block;
+  padding: 10px;
+  background-color: #0B5ED7;
+  color: white;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #3e8e41;
+}
