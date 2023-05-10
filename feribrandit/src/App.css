@@ -3,7 +3,7 @@
   font-size: 18px;
 }
 .navbar-brand{
-  padding-right: 25rem;
+  padding-right: 20rem;
 }
 
 
@@ -95,3 +95,88 @@ figure {
       flex-direction: column;
       gap: 3rem;
         }
+
+
+
+  
+  
+  
+  .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+  gap: 20px; /* Adjust the gap between cards as needed */
+}
+
+.personality-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+}
+
+.personality-card img {
+  width: 200px; /* Adjust the image size as needed */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.personality-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.personality-card p {
+  font-size: 14px;
+}
+
+/*This is for footer */
+
+
+
+.footer {
+  background-color: #444654;
+  padding: 40px;
+  color: #f2f2f2;
+  font-weight: bold;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin-bottom: 10px;
+}
+
+.social-media {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-media li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-media a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+}

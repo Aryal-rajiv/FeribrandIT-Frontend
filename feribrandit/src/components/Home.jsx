@@ -57,6 +57,24 @@ export default function Home() {
         </button>
       </div>
       <Products />
+
+      <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-section">
+          <h3>About Us</h3>
+          <p>We are a clothing store committed to providing high-quality sustainable fashion for every occasion.</p>
+        </div>
+        <div className="footer-section">
+          <h3>Contact</h3>
+          <p>Email: feribrandit@gmail.com</p>
+          <p>Phone: +977 9860620334</p>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <p>&copy; {new Date().getFullYear()} FeribrandIT Store. All rights reserved.</p>
+      </div>
+    </footer>
+
     </>
   );
 }

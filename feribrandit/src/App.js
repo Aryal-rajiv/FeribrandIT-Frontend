@@ -9,6 +9,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Rebrand from "./components/Rebrand";
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/products" component={Products} />
         <Route exact path="/products/:id" component={Product} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/rebrand" component={Rebrand} /> 
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />

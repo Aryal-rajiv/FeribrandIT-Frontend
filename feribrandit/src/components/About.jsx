@@ -1,7 +1,6 @@
 import React from 'react';
 export default function About(){
-  
-    return( <>
+      return( <>
      <div className="wrapper">
     
       <div className='gird grid-two-column'>
@@ -22,8 +21,6 @@ export default function About(){
           effective service to the customers.
          </p>
          
-         
-  
        </div>
        {/*Homepage wala image */}
        <div className='hero-section-image'>
@@ -33,10 +30,34 @@ export default function About(){
        </div>
       </div>
       </div>
+      <p className='into-data'>People are unaware about the choices they want and the style they want to carry 
+for themselves.Most of the people belong to a middle class family so they don’t have enough 
+money to buy new luxurious or classic clothes for different special occasions. In fact rich 
+people also tend to be very less buyers in terms of formal clothes because they don’t want to 
+waste money on clothes. They don’t want to wear the same clothes on different occasions so 
+it may be an opportunity for those to sell the used clothes using this website.</p>
       <div>
+
       <h3 className='quote'>Discover our collection of redesigned clothes by top designers at affordable prices.
          Our mission is to bring you high-quality fashion pieces that combine the creativity of renowned designers with accessible prices</h3>
-          
+        
+         <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-section">
+          <h3>About Us</h3>
+          <p>We are a clothing store committed to providing high-quality sustainable fashion for every occasion.</p>
+        </div>
+        <div className="footer-section">
+          <h3>Contact</h3>
+          <p>Email: feribrandit@gmail.com</p>
+          <p>Phone: +977 9860620334</p>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <p>&copy; {new Date().getFullYear()} FeribrandIT Store. All rights reserved.</p>
+      </div>
+    </footer>
+        
     </div>
       </>
     )

@@ -26,14 +26,17 @@ export default function NavBar() {
             <NavLink className="nav-link active" aria-current="page" to="/">
               Home
             </NavLink>
-            <NavLink className="nav-link" to="/products">
-              Products
-            </NavLink>
             <NavLink className="nav-link" to="/about">
               About
             </NavLink>
+            <NavLink className="nav-link" to="/products">
+              Products
+            </NavLink>
+            <NavLink className="nav-link" to="/rebrand">
+              Rebrand
+            </NavLink>
             <NavLink className="nav-link" to="/contact">
-              Contact
+              Customer Care
             </NavLink>
             <div className="nav-link buttons" >
               <NavLink to="/login" className="btn btn-outline-dark">
