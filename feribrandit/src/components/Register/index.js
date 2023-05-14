@@ -1,11 +1,12 @@
-import { divide } from 'fontawesome';
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const SignupForm = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value);
@@ -25,18 +26,30 @@ const SignupForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform form submission logic here
-    console.log('Form submitted!');
-    console.log('First Name:', firstName);
-    console.log('Last Name:', lastName);
-    console.log('Email:', email);
-    console.log('Password:', password);
+    // Create an object with the form data
+    const formData = {
+      firstName,
+      lastName,
+      email,
+      password
+    };
 
-    // Reset form fields
-    setFirstName('');
-    setLastName('');
-    setEmail('');
-    setPassword('');
+    setShowSuccessMessage(true);
+
+
+    axios.post('/signup', formData)
+    .then((response) => {
+      console.log(response.data);
+      // Reset form fields
+      setFirstName('');
+      setLastName('');
+      setEmail('');
+      setPassword('');
+    })
+    .catch((error) => {
+      console.error('Error submitting form:', error);
+    });
+
   };
 
   return (
@@ -57,7 +70,7 @@ const SignupForm = () => {
       <br />
       <label>
         Email:
-        <input type="email" value={email} onChange={handleEmailChange} />
+        <input type="email" value={email} onChange={handleEmailChange}/>
       </label>
       <br />
       <label>
@@ -68,8 +81,15 @@ const SignupForm = () => {
       <button type="submit">Sign Up</button>
     </form>
     </div>
+    {showSuccessMessage && (
+        <h1 className="display-1 text-center m-4" style={{ color: 'green', marginTop: '10px' }}>
+          Registered successfully!
+        </h1>
+      )}
     </>
   );
 };
+
+
 
 export default SignupForm;

@@ -2,6 +2,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import CartProduct from "./cart/CartProduct";
+import DeliveryForm from "./Deliveryform";
 
 export default function Cart() {
   const state = useSelector((state) => state.handleCart);
@@ -37,8 +38,9 @@ export default function Cart() {
           })}
           <div className="total"> Rs. {parseFloat(total).toFixed(2)}</div>
           <br />
-          
         </div>
+        <h2>Please fill delivery information</h2>
+        <DeliveryForm>Please fill this</DeliveryForm>
       </div>
     </div>
   );

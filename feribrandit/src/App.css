@@ -213,3 +213,11 @@ button {
 button:active {
   background-color: #3e8e41;
 }
+
+  .button {
+  display: block;
+  padding: 10px;
+  background-color: #0B5ED7;
+  color: white;
+  cursor: pointer;
+}
