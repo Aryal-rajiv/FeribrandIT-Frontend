@@ -1,7 +1,7 @@
 import React from 'react';
 export default function About(){
       return( <>
-     <div className="wrapper">
+     <div className="wrapper1">
     
       <div className='gird grid-two-column'>
        <div className='hero-section-data'>
@@ -40,7 +40,7 @@ it may be an opportunity for those to sell the used clothes using this website.<
 
       <h3 className='quote'>Discover our collection of redesigned clothes by top designers at affordable prices.
          Our mission is to bring you high-quality fashion pieces that combine the creativity of renowned designers with accessible prices</h3>
-        
+        <br />
          <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">

@@ -4,10 +4,14 @@ const DeliveryForm = () => {
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
   const [phone, setPhone] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
+    // Handle form submission logic here, e.g., sending email
+
+    // Set isSubmitted to true after successful submission
+    setIsSubmitted(true);
   };
 
   return (
@@ -33,6 +37,7 @@ const DeliveryForm = () => {
         />
       </div>
       <div>
+        <br/>
         <label htmlFor="phone">Phone:</label>
         <input
           type="tel"
@@ -42,7 +47,13 @@ const DeliveryForm = () => {
           required
         />
       </div>
-      <button type="submit">Submit</button>
+      <br/>
+      <button className="button" type="submit">
+        Submit
+      </button>
+      {isSubmitted && (
+        <p>Thank you! Your order will be delivered.</p>
+      )}
     </form>
   );
 };

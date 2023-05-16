@@ -4,13 +4,15 @@ function LoginForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     // Validate login credentials (you would typically do this on the server-side)
-    if (username === 'admin' && password === 'password') {
-      // Display success message
+    if (username === 'rajivary1@gmail.com' && password === 'password123') {
+      // Update login status and display success message
+      setIsLoggedIn(true);
       setShowSuccessMessage(true);
     } else {
       // Clear form fields
@@ -22,12 +24,20 @@ function LoginForm() {
     }
   };
 
+  const handleLogout = () => {
+    // Clear form fields, reset login status, and hide success message
+    setUsername('');
+    setPassword('');
+    setIsLoggedIn(false);
+    setShowSuccessMessage(false);
+  };
+
   return (
     <div>
       <h1 className="display-1 text-center m-4">Login</h1>
-    <div className="container">
-      <form onSubmit={handleSubmit} className="row g-3 needs-validation" novalidate>
-          <label htmlFor="username">Username:</label>
+      <div className="container">
+        <form onSubmit={handleSubmit} className="row g-3 needs-validation" novalidate>
+          <label htmlFor="username">Email:</label>
           <input
             type="text"
             id="username"
@@ -36,7 +46,7 @@ function LoginForm() {
             onChange={(event) => setUsername(event.target.value)}
             required
           />
-          <br/>
+          <br />
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -46,16 +56,22 @@ function LoginForm() {
             onChange={(event) => setPassword(event.target.value)}
             required
           />
-        <br/>
+          <br />
 
-          <input type="submit" value="Submit" className='button' />
-         
-        
-      </form>
+          {isLoggedIn ? (
+            <button onClick={handleLogout} className="button">
+              Logout
+            </button>
+          ) : (
+            <button type="submit" className="button">
+              Login
+            </button>
+          )}
+        </form>
       </div>
-      {showSuccessMessage && (
-        <p style={{ color: 'green', marginTop: '10px' }}>
-          Login successful!
+      {showSuccessMessage && isLoggedIn && (
+        <p className="display-1 text-center m-4" style={{ color: 'green', marginTop: '10px' }}>
+          Welcome Rajiv Aryal
         </p>
       )}
     </div>
