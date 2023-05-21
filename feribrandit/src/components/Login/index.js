@@ -20,7 +20,7 @@ function LoginForm() {
       setPassword('');
 
       // Display error message (optional)
-      alert('Invalid username or password!');
+      alert('Invalid Email or password!');
     }
   };
 
@@ -70,7 +70,7 @@ function LoginForm() {
         </form>
       </div>
       {showSuccessMessage && isLoggedIn && (
-        <p className="display-1 text-center m-4" style={{ color: 'green', marginTop: '10px' }}>
+        <p className="display-6 text-center m-4" style={{ color: 'green', marginTop: '10px' }}>
           Welcome Rajiv Aryal
         </p>
       )}

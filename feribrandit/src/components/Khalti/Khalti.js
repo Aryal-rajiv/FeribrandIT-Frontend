@@ -7,7 +7,7 @@ export default function Khalti() {
   return (
 
     <div>
-       <button onClick={() =>  checkout.show({amount: 1000}) }>KhaltiPay</button>
+       <button onClick={() =>  checkout.show({amount: 1099}) }>KhaltiPay</button>
     </div>
   )
 }

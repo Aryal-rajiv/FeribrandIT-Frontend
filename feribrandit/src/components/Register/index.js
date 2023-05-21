@@ -82,7 +82,7 @@ const SignupForm = () => {
     </form>
     </div>
     {showSuccessMessage && (
-        <h1 className="display-1 text-center m-4" style={{ color: 'green', marginTop: '10px' }}>
+        <h1 className="display-6 text-center m-4" style={{ color: 'green', marginTop: '10px' }}>
           Registered successfully!
         </h1>
       )}
